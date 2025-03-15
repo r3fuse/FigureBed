@@ -19,15 +19,8 @@ app.listen(port,()=>{
 
 let uuidd;
 
-app.post('/',(req,res)=>{
-    // console.log(req.body);
-    console.log(JSON.parse(req.body).fileType);
-    
+app.post('/api/upload',(req,res)=>{
     const {fileType,imgBase64} = JSON.parse(req.body)
-    console.log(imgBase64);
-    
-    // const encoder = new TextEncoder('utf-8');
-    // console.log(encoder.encode(req.body).length);
     const imgUrl = base64ToImage(imgBase64)
     res.send(uuidd+'.'+fileType)
 })
