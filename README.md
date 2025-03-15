@@ -10,6 +10,7 @@
                 imgBase64:'',
                 fileType,
             }<br>
+>其中imgBase64的值必须为图片转码为base64后的值，fileType必须是文件类型-->例如png
 
 ```
 npm install
